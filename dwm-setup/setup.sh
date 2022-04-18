@@ -35,7 +35,7 @@ mkdir "/home/$currentUser/.config/"
 sleep 2s
 pacman -S xorg lightdm lightdm-gtk-greeter --noconfirm
 systemctl enable lightdm
-cp -r "/home/$currentUser/archtitus/arch-setup/dwm-config" "/usr/local"
+cp -r "/home/$currentUser/archtitus/dwm-setup/dwm-config" "/usr/local"
 cd "/usr/local/dwm-config"
 bash install.sh
 clear
@@ -60,7 +60,7 @@ bash install.sh blue
 cd "/home/$currentUser/.config/"
 mkdir "gtk-3.0"
 cd "gtk-3.0"
-cp -r "/home/$currentUser/archtitus/arch-setup/settings.ini/" .
+cp -r "/home/$currentUser/archtitus/dwm-setup/settings.ini/" .
 # Installs wallpaper themes.
 # cp -r "/home/$currentUser/Arch-setup/wallpapers/" "/home/$currentUser/.wallpapers"
 clear
@@ -68,7 +68,7 @@ clear
 # Installing ZSH AND POWERLEVEL10K
 echo "INSTALLING ZSH..."
 sleep 3s
-cp -r "/home/$currentUser/Arch-Setup/fish" "/home/$currentUser/.config/"
+# cp -r "/home/$currentUser/Arch-Setup/fish" "/home/$currentUser/.config/"
 pacman -S zsh ttf-dejavu --noconfirm
 clear
 
