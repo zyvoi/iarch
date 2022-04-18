@@ -4,8 +4,6 @@
 # @file ArchTitus
 # @brief Entrance script that launches children scripts for each phase of installation.
 
-chmod +x install_dwm_test.sh
-chmod +x wifi_connect.sh
 
 # Find the name of the folder the scripts are in
 set -a
