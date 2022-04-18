@@ -45,7 +45,7 @@ echo "Installing themes & applications!"
 sleep 2s
 cd "/home/$currentUser/"
 pacman -S archlinux-keyring
-pacman -S neovim thunar vlc htop zsh --noconfirm
+pacman -S neovim thunar alacrity vlc htop zsh --noconfirm
 # Installs themes
 mkdir .rice
 cd .rice
