@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo nmcli radio wifi on 
+sudo nmcli --ask dev wifi connect 
