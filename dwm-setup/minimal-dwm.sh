@@ -1,31 +1,25 @@
 #!/bin/bash
 
-
-sudo pacman -Syu 
-
-sudo pacman -S base-devel git neovim 
+sudo pacman -Sy base-devel git neovim 
 
 sudo pacman -S xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk 
 
-git clone https://git.suckless.org/dwm/
+cd /home/pc
 
-git clone https://git.suckless.org/st/
+git clone https://git.suckless.org/dwm/
 
 git clone https://git.suckless.org/dmenu/
 
-cd ~ 
-
-
 echo "exec dwm" >> .xinitrc
 
-cd ~/archtitus/st 
+cd dwm 
 
 sudo make clean install 
 
-cd ../dwm
+cd ../dmenu
 
 sudo make clean install 
 
-cd ~ 
+cd .. 
 
 echo "startx" >> .bash_profile 
