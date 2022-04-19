@@ -1,9 +1,8 @@
 #!/bin/bash
 #github-action genshdoc
 #
-# @file ArchTitus
+# @file aali
 # @brief Entrance script that launches children scripts for each phase of installation.
-
 
 # Find the name of the folder the scripts are in
 set -a
@@ -15,7 +14,7 @@ echo -ne "
 -------------------------------------------------------------------------
                     Automated Arch Linux Installer
 -------------------------------------------------------------------------
-                Scripts are in directory named ArchTitus
+               Scripts are in directory named ArchTitus
 "
     ( bash $SCRIPT_DIR/scripts/startup.sh )|& tee ./logs/startup.log
       source $CONFIGS_DIR/setup.conf
@@ -29,7 +28,7 @@ echo -ne "
 
 echo -ne "
 -------------------------------------------------------------------------
-                    Automated Arch Linux Installer
+                      Automated Arch Linux Installer
 -------------------------------------------------------------------------
-                Done - Please Eject Install Media and Reboot
+               Done - Please Eject Install Media and Reboot
 "
