@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/pc/
+
 git clone https://aur.archlinux.org/paru.git
 
 cd paru
