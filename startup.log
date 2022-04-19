@@ -11,7 +11,7 @@
 ------------------------------------------------------------------------
 Please enter your username: Please enter your password: 
 Please repeat your password: 
-[?2004hPlease enter your hostname: pc
+[?2004hPlease enter your hostname: y[Kpc
 [?2004l[H[J[3J
 -------------------------------------------------------------------------
  █████╗ ██████╗  ██████╗██╗  ██╗████████╗██╗████████╗██╗   ██╗███████╗
@@ -94,7 +94,7 @@ Please Select your file system for both boot and root
 ------------------------------------------------------------------------
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    15  100    15    0     0     69      0 --:--:-- --:--:-- --:--:--    69
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    15  100    15    0     0     63      0 --:--:-- --:--:-- --:--:--    63100    15  100    15    0     0     63      0 --:--:-- --:--:-- --:--:--    63
 
 System detected your timezone to be 'America/Chicago' 
 Is this correct?
@@ -145,5 +145,5 @@ Please select key board layout from this list
 
 
 
-[6n[6n[?25l[14;1H  [7m us [27m[14;61H   by [14;121H   ca [14;181H   cf [15;1H   cz [15;61H   de [15;121H   dk [15;181H   es [16;1H   et [16;61H   fa [16;121H   fi [16;181H   fr [17;1H   gr [17;61H   hu [17;121H   il [17;181H   it [18;1H   lt [18;61H   lv [18;121H   mk [18;181H   nl [19;1H   no [19;61H   pl [19;121H   ro [19;181H   ru [20;1H   sg [20;61H   ua [20;121H   uk [42;1H
+[6n[6n[?25l[14;1H  [7m us [27m[14;44H   by [14;87H   ca [14;130H   cf [15;1H   cz [15;44H   de [15;87H   dk [15;130H   es [16;1H   et [16;44H   fa [16;87H   fi [16;130H   fr [17;1H   gr [17;44H   hu [17;87H   il [17;130H   it [18;1H   lt [18;44H   lv [18;87H   mk [18;130H   nl [19;1H   no [19;44H   pl [19;87H   ro [19;130H   ru [20;1H   sg [20;44H   ua [20;87H   uk [42;1H
 [?25hYour key boards layout: us 
