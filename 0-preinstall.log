@@ -13,7 +13,7 @@
 Setting up mirrors for optimal download
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     3  100     3    0     0     14      0 --:--:-- --:--:-- --:--:--    14100     3  100     3    0     0     14      0 --:--:-- --:--:-- --:--:--    14
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     3  100     3    0     0     10      0 --:--:-- --:--:-- --:--:--    10
 warning: archlinux-keyring-20220224-1 is up to date -- reinstalling
 resolving dependencies...
 looking for conflicting packages...
@@ -72,15 +72,34 @@ Optional dependencies for pacman-contrib
 (1/2) Reloading system manager configuration...
 (2/2) Arming ConditionNeedsUpdate...
 warning: reflector-2021.11-3 is up to date -- skipping
-warning: rsync-3.2.3-4 is up to date -- skipping
 warning: grub-2:2.06-5 is up to date -- skipping
- there is nothing to do
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) rsync-3.2.4-1
+
+Total Download Size:   0.31 MiB
+Total Installed Size:  0.58 MiB
+Net Upgrade Size:      0.01 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ rsync-3.2.4-1-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+checking available disk space...
+:: Processing package changes...
+upgrading rsync...
+:: Running post-transaction hooks...
+(1/2) Reloading system manager configuration...
+(2/2) Arming ConditionNeedsUpdate...
 
 -------------------------------------------------------------------------
                     Setting up US mirrors for faster downloads
 -------------------------------------------------------------------------
-[2022-04-18 20:24:41] WARNING: failed to rate http(s) download (https://mirror.theash.xyz/arch/community/os/x86_64/community.db): HTTP Error 403: Forbidden
-[2022-04-18 20:24:51] WARNING: failed to rate rsync download (rsync://mirror.lty.me/archlinux/community/os/x86_64/community.db): Download timed out after 5 second(s).
+[2022-04-19 00:07:12] WARNING: failed to rate http(s) download (https://mirror.theash.xyz/arch/community/os/x86_64/community.db): HTTP Error 403: Forbidden
 
 -------------------------------------------------------------------------
                     Installing Prerequisites
@@ -136,7 +155,7 @@ NOTE: several default settings have changed in version 5.15, please make sure
       - enabled free-space-tree (-R free-space-tree)
 
 Label:              ROOT
-UUID:               5a2f7e70-f610-482a-94e3-98f1912c5888
+UUID:               02aa0bd1-4819-4284-95f0-6165d89c33ad
 Node size:          16384
 Sector size:        4096
 Filesystem size:    238.18GiB
