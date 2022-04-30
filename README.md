@@ -13,9 +13,9 @@ From initial Prompt type the following commands:
 
 ```
 pacman -Sy git
-git clone https://github.com/zyvoi/archtitus
-cd archtitus
-./archtitus.sh
+git clone https://github.com/zyvoi/iarch
+cd iarch
+./iarch.sh
 ```
 
 ### System Description
