@@ -56,3 +56,5 @@ An issue is easier to resolve if it contains a few important pieces of informati
 ## Credits
 
 - Original packages script was a post install cleanup script called ArchMatic located here: https://github.com/rickellis/ArchMatic
+
+- Original packages script was a post install cleanup script called ArchMatic located here: https://github.com/christitustech/ArchTitus
