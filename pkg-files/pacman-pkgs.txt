@@ -105,3 +105,8 @@ zip
 zsh
 zsh-syntax-highlighting
 zsh-autosuggestions
+alacritty 
+neovim 
+nvtop 
+firefox 
+base-devel
