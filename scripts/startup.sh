@@ -319,7 +319,7 @@ desktopenv
 # Set fixed options that installation uses if user choses server installation
 set_option INSTALL_TYPE MINIMAL
 set_option AUR_HELPER NONE
-if [[ ! $desktop_env == server ]]; then
+if [[ ! $desktop_env == dwm ]]; then
   clear
   logo
   aurhelper
