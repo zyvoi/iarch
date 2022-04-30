@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/pc/
+cd $HOME
 
 git clone https://aur.archlinux.org/paru.git
 
@@ -8,6 +8,6 @@ cd paru
 
 makepkg -si
 
-cd /home/pc
+cd $HOME
 
 sudo rm -rf paru
