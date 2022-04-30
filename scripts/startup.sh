@@ -133,82 +133,81 @@ select_option() {
 }
 # @description Displays ArchTitus logo
 # @noargs
-logo () {
-# This will be shown on every set as user is progressing
-echo -ne "
-------------------------------------------------------------------------
-            Please select presetup settings for your system              
-------------------------------------------------------------------------
-"
+logo () { # This will be shown on every set as user is progressing
+  echo -ne "
+  ------------------------------------------------------------------------
+              Please select presetup settings for your system              
+  ------------------------------------------------------------------------
+  "
 }
 # @description This function will handle file systems. At this movement we are handling only
 # btrfs and ext4. Others will be added in future.
 filesystem () {
-echo -ne "
-Please Select your file system for both boot and root
-"
-options=("btrfs" "ext4" "luks" "exit")
-select_option $? 1 "${options[@]}"
+  echo -ne "
+  Please Select your file system for both boot and root
+  "
+  options=("btrfs" "ext4" "luks" "exit")
+  select_option $? 1 "${options[@]}"
 
-case $? in
-0) set_option FS btrfs;;
-1) set_option FS ext4;;
-2) 
-while true; do
-  echo -ne "Please enter your luks password: \n"
-  read -s luks_password # read password without echo
+  case $? in
+  0) set_option FS btrfs;;
+  1) set_option FS ext4;;
+  2) 
+  while true; do
+    echo -ne "Please enter your luks password: \n"
+    read -s luks_password # read password without echo
 
-  echo -ne "Please repeat your luks password: \n"
-  read -s luks_password2 # read password without echo
+    echo -ne "Please repeat your luks password: \n"
+    read -s luks_password2 # read password without echo
 
-  if [ "$luks_password" = "$luks_password2" ]; then
-    set_option LUKS_PASSWORD $luks_password
-    set_option FS luks
-    break
-  else
-    echo -e "\nPasswords do not match. Please try again. \n"
-  fi
-done
-;;
-3) exit ;;
-*) echo "Wrong option please select again"; filesystem;;
-esac
+    if [ "$luks_password" = "$luks_password2" ]; then
+      set_option LUKS_PASSWORD $luks_password
+      set_option FS luks
+      break
+    else
+      echo -e "\nPasswords do not match. Please try again. \n"
+    fi
+  done
+  ;;
+  3) exit ;;
+  *) echo "Wrong option please select again"; filesystem;;
+  esac
 }
 # @description Detects and sets timezone. 
 timezone () {
-# Added this from arch wiki https://wiki.archlinux.org/title/System_time
-time_zone="$(curl --fail https://ipapi.co/timezone)"
-echo -ne "
-System detected your timezone to be '$time_zone' \n"
-echo -ne "Is this correct?
-" 
-options=("Yes" "No")
-select_option $? 1 "${options[@]}"
+  # Added this from arch wiki https://wiki.archlinux.org/title/System_time
+  time_zone="$(curl --fail https://ipapi.co/timezone)"
+  echo -ne "
+  System detected your timezone to be '$time_zone' \n"
+  echo -ne "Is this correct?
+  " 
+  options=("Yes" "No")
+  select_option $? 1 "${options[@]}"
 
-case ${options[$?]} in
-    y|Y|yes|Yes|YES)
-    echo "${time_zone} set as timezone"
-    set_option TIMEZONE $time_zone;;
-    n|N|no|NO|No)
-    echo "Please enter your desired timezone e.g. Europe/London :" 
-    read new_timezone
-    echo "${new_timezone} set as timezone"
-    set_option TIMEZONE $new_timezone;;
-    *) echo "Wrong option. Try again";timezone;;
-esac
+  case ${options[$?]} in
+      y|Y|yes|Yes|YES)
+      echo "${time_zone} set as timezone"
+      set_option TIMEZONE $time_zone;;
+      n|N|no|NO|No)
+      echo "Please enter your desired timezone e.g. Europe/London :" 
+      read new_timezone
+      echo "${new_timezone} set as timezone"
+      set_option TIMEZONE $new_timezone;;
+      *) echo "Wrong option. Try again";timezone;;
+  esac
 }
 # @description Set user's keyboard mapping. 
 keymap () {
-echo -ne "
-Please select key board layout from this list"
-# These are default key maps as presented in official arch repo archinstall
-options=(us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk)
+  echo -ne "
+  Please select key board layout from this list"
+  # These are default key maps as presented in official arch repo archinstall
+  options=(us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk)
 
-select_option $? 4 "${options[@]}"
-keymap=${options[$?]}
+  select_option $? 4 "${options[@]}"
+  keymap=${options[$?]}
 
-echo -ne "Your key boards layout: ${keymap} \n"
-set_option KEYMAP $keymap
+  echo -ne "Your key boards layout: ${keymap} \n"
+  set_option KEYMAP $keymap
 }
 
 # @description Choose whether drive is SSD or not.
@@ -319,7 +318,7 @@ desktopenv
 # Set fixed options that installation uses if user choses server installation
 set_option INSTALL_TYPE MINIMAL
 set_option AUR_HELPER NONE
-if [[ ! $desktop_env == dwm ]]; then
+if [[ ! $desktop_env == server ]]; then
   clear
   logo
   aurhelper
