@@ -310,31 +310,31 @@ installtype () {
 
 # Starting functions
 clear
-echo "========== USER INFO =========="
+echo "=============== USER INFO ==============="
 userinfo
 clear
-echo "========== DESKTOP ENV =========="
+echo "=============== DESKTOP ENV ==============="
 desktopenv
 # Set fixed options that installation uses if user chooses server installation
 set_option INSTALL_TYPE MINIMAL
 set_option AUR_HELPER NONE
-if [[ ! $desktop_env == server ]]; then
+if [[ ! $desktop_env == server ]]; then  # if desktop env is not server
   clear
-  echo "========== AUR HELPER =========="
+  echo "=============== AUR HELPER ==============="
   aurhelper
   clear
-  echo "========== INSTALL TYPE =========="
+  echo "=============== INSTALL TYPE ==============="
   installtype
 fi
 clear
-echo "========== DISK PART =========="
+echo "=============== DISK PART ==============="
 diskpart
 clear
-echo "========== FILE SYSTEM =========="
+echo "=============== FILE SYSTEM ==============="
 filesystem
 clear
-echo "========== TIME ZONE =========="
+echo "=============== TIME ZONE ==============="
 timezone
 clear
-echo "========== KEYMAP =========="
+echo "=============== KEYMAP ==============="
 keymap
